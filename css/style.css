@@ -1,0 +1,51 @@
+:root{
+  --bg:#fcfbf9;
+  --accent:#2b6777;
+  --muted:#6b6b6b;
+  --card:#ffffff;
+  --accent-2:#f28c28;
+  --max-width:1100px;
+  --radius:10px;
+  --gap:1rem;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  color: #111;
+}
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);line-height:1.5}
+.container{max-width:var(--max-width);margin:0 auto;padding:1rem}
+.site-header{background:linear-gradient(90deg,var(--accent),#20585f);color:white}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:0.75rem 1rem}
+.brand{margin:0;font-size:1.25rem}
+.nav{list-style:none;margin:0;padding:0;display:flex;gap:0.5rem}
+.nav a{color:white;text-decoration:none;padding:0.5rem;border-radius:6px}
+.nav a[aria-current="page"], .nav a:hover{background:rgba(255,255,255,0.12)}
+
+.hero{display:grid;grid-template-columns:1fr;gap:1rem;align-items:center;padding:1rem 0}
+.hero img{width:100%;height:auto;border-radius:var(--radius);display:block}
+.hero-text{background:linear-gradient(180deg, rgba(255,255,255,0.0), rgba(255,255,255,0.0))}
+.btn{display:inline-block;background:var(--accent-2);color:white;padding:0.5rem 0.9rem;border-radius:8px;text-decoration:none}
+
+.features, .recent{background:var(--card);padding:1rem;margin-top:1rem;border-radius:var(--radius);box-shadow:0 2px 6px rgba(0,0,0,0.06)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+.card{background:var(--card);padding:0.5rem;border-radius:8px;box-shadow:0 1px 4px rgba(0,0,0,0.05);text-align:center}
+.card img{width:100%;height:140px;object-fit:cover;border-radius:6px}
+.site-footer{padding:1rem 0;text-align:center;color:var(--muted);margin-top:2rem}
+
+.cards{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.journey-card{background:var(--card);padding:1rem;border-radius:8px;box-shadow:0 1px 6px rgba(0,0,0,0.04)}
+.start-btn{margin-top:0.5rem}
+
+.score{margin-top:1rem;background:linear-gradient(90deg,#fff,#fbfbfb);padding:0.5rem;border-radius:8px;text-align:center}
+
+.form-group{margin-bottom:0.8rem}
+label{display:block;margin-bottom:0.2rem}
+input[type="text"],input[type="email"],input[type="date"],select,textarea{width:100%;padding:0.5rem;border:1px solid #ddd;border-radius:6px}
+.radios{display:flex;gap:0.5rem}
+.required-hint{color:var(--accent-2);font-weight:700}
+.form-actions{margin-top:1rem}
+
+@media(min-width:720px){
+  .hero{grid-template-columns:1fr 1fr}
+  .hero img{height:300px;object-fit:cover}
+}
