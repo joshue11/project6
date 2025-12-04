@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Thank you - Eternal Japan Journeys</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="brand">Eternal Japan Journeys</h1>
+      <nav aria-label="Main navigation">
+        <ul class="nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="journeys.html">Journeys</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2>Thanks for your feedback!</h2>
+    <div id="confirmation">
+    </div>
+
+    <p>You have submitted <strong id="countDisplay">0</strong> review(s) from this device.</p>
+    <a class="btn" href="journeys.html">Back to journeys</a>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; Eternal Japan Journeys</p>
+    </div>
+  </footer>
+
+  <script>
+    const params = new URLSearchParams(location.search);
+    const journey = params.get('journey') || '—';
+    const rating = params.get('rating') || '—';
+    const date = params.get('date') || '—';
+    const notes = params.get('notes') || '';
+
+    const summary = `
+      <p><strong>Journey:</strong> ${journey}</p>
+      <p><strong>Rating:</strong> ${rating}</p>
+      <p><strong>Date:</strong> ${date}</p>
+      <p><strong>Your notes:</strong> ${notes ? notes : 'No notes provided.'}</p>
+    `;
+
+    document.getElementById('confirmation').innerHTML = summary;
+
+    const key = 'ej_reviews_submitted';
+    let count = Number(localStorage.getItem(key) || 0);
+    count += 1;
+    localStorage.setItem(key, String(count));
+    document.getElementById('countDisplay').textContent = count;
+  </script>
+</body>
+</html>
