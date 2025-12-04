@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact - Eternal Japan Journeys</title>
+  <meta name="description" content="Contact us and submit feedback about your journey." />
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="brand">Eternal Japan Journeys</h1>
+      <nav aria-label="Main navigation">
+        <ul class="nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="journeys.html">Journeys</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2>Send us feedback</h2>
+    <form id="contactForm" method="get" action="thankyou.html" novalidate>
+      <div class="form-group">
+        <label for="name">Your name (optional)</label>
+        <input id="name" name="name" type="text" placeholder="Full name">
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email (optional)</label>
+        <input id="email" name="email" type="email" placeholder="you@example.com">
+      </div>
+
+      <div class="form-group">
+        <label for="journey">Which journey?</label>
+        <select id="journey" name="journey" required>
+          <option value="" disabled selected>Select a journey...</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Overall experience <span class="required-hint">*</span></label>
+        <div class="radios">
+          <label><input required type="radio" name="rating" value="1">1</label>
+          <label><input required type="radio" name="rating" value="2">2</label>
+          <label><input required type="radio" name="rating" value="3">3</label>
+          <label><input required type="radio" name="rating" value="4">4</label>
+          <label><input required type="radio" name="rating" value="5">5</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="date">Date of journey</label>
+        <input id="date" name="date" type="date" required>
+      </div>
+
+      <div class="form-group">
+        <label for="notes">Notes</label>
+        <textarea id="notes" name="notes" rows="5" placeholder="Share what you enjoyed..."></textarea>
+      </div>
+
+      <div class="form-actions">
+        <input class="btn" type="submit" value="Submit feedback">
+      </div>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year3"></span> Eternal Japan Journeys</p>
+    </div>
+  </footer>
+
+  <script src="js/form.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
