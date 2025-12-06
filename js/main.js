@@ -1,7 +1,7 @@
 const journeys = [
   { id: 'tokyo', title: 'Tokyo Reflection', desc: 'Urban mindfulness in neon streets.', img: 'images/tokyo.jpg', points: 100 },
   { id: 'fuji', title: 'Mount Fuji Walk', desc: 'A breathing journey with mountain views.', img: 'images/mount-fuji.jpg', points: 150 },
-  { id: 'kyoto', title: 'Kyoto Temples', desc: 'Reflect at ancient temples and gardens.', img: 'images/mount-fuji.jpg', points: 120 }
+  { id: 'kyoto', title: 'Kyoto Temples', desc: 'Reflect at ancient temples and gardens.', img: 'images/temple.jpg', points: 120 }
 ];
 
 function renderDestinations(){
